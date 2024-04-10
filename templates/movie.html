@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MOVIE RECOMMENDER</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/css/autoComplete.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+  <script type="text/javascript">
+    var films = {{suggestions|tojson}};
+  </script>
+
+</head>
+
+<body id="content" style="font-family: 'Noto Sans JP', sans-serif;">
+  <div class="logo">
+  <ul>
+    <li> <img src="../static/mg.gif" ,width="130px" height="60px"></a></li>
+  </ul></div>
+      <div class="navbar" style="float:left;">
+        <ul>
+          <li> <a href="https://www.desimartini.com/hollywood-fantasy-movies/"> Fantasy </a></li>
+          <li><a href="https://www.desimartini.com/hollywood-adventure-movies/"> Adventure </a></li>
+          <li><a href="https://www.desimartini.com/hollywood-action-movies/"> Action </a></li>
+          <li><a href="https://www.desimartini.com/hollywood-sci-fi-movies/"> Science Fiction </a></li>
+          <li><a href="https://www.desimartini.com/hollywood-crime-movies/">Crime </a></li>
+          <li><a href="https://www.desimartini.com/hollywood-drama-movies/"> Drama </a></li>
+          <li><a href="https://www.desimartini.com/hollywood-thriller-movies/"> Thriller </a></li>
+         </ul>
+        </div>
+        </body>
+
+	<div class="ml-container" style="display: block;">
+
+    <center><h1 style= ""> MOVIE RECOMMENDER</h1></center>
+    <div class="form-group shadow-textarea" style="margin-top: 30px;text-align: center;color: white;">
+        <input type="text" name="movie" class="movie form-control" id="autoComplete" autocomplete="off" placeholder="Enter the Movie Name" style="background-color: #ffffff;border-color:#ffffff;width: 60%;color: #181818" required="required" />
+    </div>
+    <br>
+    <div class="form-group" style="text-align: center;">
+      <button class="btn btn-primary btn-block movie-button" style="background-color: #e509149a;text-align: center;border-color: #e50914;width:120px;border-radius: 20px;" disabled="true" >SEARCH</button><br><br>
+    </div>
+	</div>
+  <div class="fail">
+    <center><h3>Sorry! This movie is not found in our database. 
+    Please try with other movies!</h3></center>
+  </div>
+
+	<div class="results">
+    <center>
+      <h2 id="name" class="text-uppercase"></h2>
+    </center>
+	</div>
+  <div class="footer"> 
+    <img src="../static/movie.png" height="20px" width="20px"> Contact : +91 9015121038, +91 74888 74902, +91 75014 78976  
+    </div>  
+	<script src="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@7.2.0/dist/js/autoComplete.min.js"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='autocomplete.js')}}"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{{url_for('static', filename='recommend.js')}}"></script>
+</body>
+</html>

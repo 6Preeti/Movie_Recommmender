@@ -1,0 +1,85 @@
+     form {
+        background-color: #f1f1f7;
+        width: 50%;
+        height: 50px;
+        margin: 2% 25%;
+        border-radius: 8px;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+        
+      }
+
+      input {
+        all: unset;
+        font: 16px system-ui;
+        color: rgb(12, 12, 12);
+        height: 100%;
+        width: 100%;
+        padding: 6px 10px;
+      }
+
+      ::placeholder {
+        color: rgb(17, 16, 16);
+        opacity: 0.6; 
+      }
+
+      svg {
+        color: rgb(14, 14, 14);
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 10px;
+      }
+      
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+      }
+      ul {
+        list-style-type: none;
+        margin: -6px;
+        padding: -2px;
+        overflow: hidden;
+        background-color: rgb(7, 0, 4);
+        font-family: 'Times New Roman', Times, serif;
+      
+}
+li {
+    float: left;
+}
+img{
+  border-radius: 20%;
+}
+li a {
+  display: inline-block;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+li a:hover {
+  background-color: #570101;
+
+}
+.fail {
+	display: none;
+	color: white;
+}
+.footer {  
+  position: fixed;  
+  left: 10px;  
+  bottom: 8px;  
+  right: 10px;   
+  width: 100%;  
+  background-color: rgb(11, 1, 1);  
+  color: white;  
+  text-align: center;
+  font-size: 20px;  
+  text-decoration: none;
+  }  
+ 
